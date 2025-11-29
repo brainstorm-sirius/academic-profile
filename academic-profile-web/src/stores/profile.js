@@ -74,6 +74,30 @@ export const useProfileStore = defineStore('profile', () => {
     { name: 'Ирина Плотникова', field: 'Биоинформатика', weight: 0.65 }
   ])
 
+  // Calculate H-Index based on publications citations
+  const calculateHIndex = (publicationsList) => {
+    if (!publicationsList || publicationsList.length === 0) {
+      return 0
+    }
+
+    // Extract citations and sort in descending order
+    const citations = publicationsList
+      .map(pub => Number(pub.citations) || 0)
+      .sort((a, b) => b - a)
+
+    // Find the maximum h such that at least h publications have at least h citations
+    let hIndex = 0
+    for (let i = 0; i < citations.length; i++) {
+      if (citations[i] >= i + 1) {
+        hIndex = i + 1
+      } else {
+        break
+      }
+    }
+
+    return hIndex
+  }
+
   const publications = ref([
     {
       id: 1,
@@ -127,6 +151,8 @@ export const useProfileStore = defineStore('profile', () => {
     citationsCount += item.citations
   }
 
+  const initialHIndex = calculateHIndex(publications.value)
+
   const scientist = ref({
     id: 0,
     username: 'EgorPetryaev',
@@ -137,7 +163,7 @@ export const useProfileStore = defineStore('profile', () => {
     about:
       'Исследую приложения генеративных моделей для климатического моделирования и устойчивой энергетики. Руководитель инициатив по цифровым двойникам научных лабораторий.',
     metrics: [
-      { label: 'H-Index', value: '0' },
+      { label: 'H-Index', value: initialHIndex },
       { label: 'Citations', value: citationsCount },
       { label: 'Publications', value: publications.value.length }
     ]
@@ -224,6 +250,7 @@ export const useProfileStore = defineStore('profile', () => {
       0
     )
     const totalPublications = publications.value.length
+    const hIndex = calculateHIndex(publications.value)
 
     const ensureMetric = (label, value) => {
       const metric = scientist.value.metrics.find((m) => m.label === label)
@@ -234,6 +261,7 @@ export const useProfileStore = defineStore('profile', () => {
       }
     }
 
+    ensureMetric('H-Index', hIndex)
     ensureMetric('Citations', totalCitations)
     ensureMetric('Publications', totalPublications)
   }
