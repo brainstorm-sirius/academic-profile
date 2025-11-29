@@ -1,0 +1,72 @@
+{
+    "recommendations": [
+      {
+        "author_id": "1",
+        "author_name": "Egor Petriaev",
+        "total_score": 85,
+        "similarity_score": 92,
+        "productivity_score": 78,
+        "diversity_score": 88,
+        "articles_count": 15,
+        "interests_count": 3,
+        "main_interest": "Physics"
+      },
+      {
+        "author_id": "2",
+        "author_name": "Дарья Новикова",
+        "total_score": 91,
+        "similarity_score": 88,
+        "productivity_score": 95,
+        "diversity_score": 90,
+        "articles_count": 32,
+        "interests_count": 4,
+        "main_interest": "Квантовые алгоритмы"
+      },
+      {
+        "author_id": "3",
+        "author_name": "Анна Крылова",
+        "total_score": 87,
+        "similarity_score": 85,
+        "productivity_score": 90,
+        "diversity_score": 86,
+        "articles_count": 28,
+        "interests_count": 2,
+        "main_interest": "Machine Learning"
+      },
+      {
+        "author_id": "4",
+        "author_name": "Сергей Ефимов",
+        "total_score": 82,
+        "similarity_score": 80,
+        "productivity_score": 85,
+        "diversity_score": 81,
+        "articles_count": 22,
+        "interests_count": 3,
+        "main_interest": "Климатология"
+      },
+      {
+        "author_id": "5",
+        "author_name": "Марк Панов",
+        "total_score": 79,
+        "similarity_score": 75,
+        "productivity_score": 83,
+        "diversity_score": 79,
+        "articles_count": 18,
+        "interests_count": 2,
+        "main_interest": "Робототехника"
+      },
+      {
+        "author_id": "6",
+        "author_name": "Виктория Ли",
+        "total_score": 88,
+        "similarity_score": 90,
+        "productivity_score": 87,
+        "diversity_score": 87,
+        "articles_count": 25,
+        "interests_count": 3,
+        "main_interest": "Квантовые вычисления"
+      }
+    ],
+    "processing_time": 0
+  }
+  

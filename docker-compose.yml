@@ -1,0 +1,49 @@
+services:
+  backend:
+    build:
+      context: ./backend_academic
+      dockerfile: Dockerfile
+    container_name: academic_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend_academic/data:/app/data
+      - ./backend_academic/model:/app/model
+      # CSV файлы монтируются опционально (если файлов нет, volume будет пустым)
+      - ./backend_academic:/app/csv_data:ro
+    environment:
+      - DATABASE_URL=sqlite:////app/data/users.db
+      - SECRET_KEY=${SECRET_KEY:-change-me-in-production}
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - academic-network
+
+  frontend:
+    build:
+      context: ./academic-profile-web
+      dockerfile: Dockerfile
+    container_name: academic_frontend
+    ports:
+      - "80:5173"
+    volumes:
+      - ./academic-profile-web:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    command: npm run dev -- --host 0.0.0.0
+    depends_on:
+      - backend
+    networks:
+      - academic-network
+
+networks:
+  academic-network:
+    driver: bridge
+

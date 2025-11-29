@@ -1,0 +1,100 @@
+{
+  "scientist": {
+    "username": "PellizzoniS",
+    "name": "Pellizzoni S",
+    "affiliation": "N/A",
+    "orcid": "N/A",
+    "metrics": [
+      {
+        "label": "H-Index",
+        "value": "N/A"
+      },
+      {
+        "label": "Citations",
+        "value": "N/A"
+      },
+      {
+        "label": "Publications",
+        "value": "8"
+      }
+    ]
+  },
+  "analytics": {
+    "index": 1.8,
+    "average": 2,
+    "performance": "Overall Performance"
+  },
+  "topicDistribution": [
+    {
+      "label": "Stem Cells",
+      "value": 8,
+      "color": "#5BC0F8"
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "Executive functions, math anxiety and math performance in middle school students",
+      "journal": "Br J Dev Psychol",
+      "year": 2022,
+      "citations": "N/A",
+      "summary": "Br J Dev Psychol. 2022 Sep;40(3):438-452. doi: 10.1111/bjdp.12412. Epub 2022 Apr 8."
+    },
+    {
+      "id": 2,
+      "title": "The interplay between math anxiety and working memory on math performance: a longitudinal study",
+      "journal": "Ann N Y Acad Sci",
+      "year": 2022,
+      "citations": "N/A",
+      "summary": "Ann N Y Acad Sci. 2022 Apr;1510(1):132-144. doi: 10.1111/nyas.14722. Epub 2021 Dec 24."
+    },
+    {
+      "id": 3,
+      "title": "The interplay between ego-resiliency, math anxiety and working memory in math achievement",
+      "journal": "Psychol Res",
+      "year": 2024,
+      "citations": "N/A",
+      "summary": "Psychol Res. 2024 Nov;88(8):2401-2415. doi: 10.1007/s00426-024-01995-0. Epub 2024 Jun 28."
+    },
+    {
+      "id": 4,
+      "title": "Attentional bias and math avoidance: insights from a developmental sample",
+      "journal": "Psychol Res",
+      "year": 2025,
+      "citations": "N/A",
+      "summary": "Psychol Res. 2025 Mar 6;89(2):62. doi: 10.1007/s00426-025-02089-1."
+    },
+    {
+      "id": 5,
+      "title": "The impact of math anxiety and self-efficacy in middle school STEM choices: A 3-year longitudinal study",
+      "journal": "Br J Educ Psychol",
+      "year": 2024,
+      "citations": "N/A",
+      "summary": "Br J Educ Psychol. 2024 Dec;94(4):1091-1108. doi: 10.1111/bjep.12707. Epub 2024 Jul 8."
+    },
+    {
+      "id": 6,
+      "title": "Math anxiety and math achievement: The effects of emotional and math strategy training",
+      "journal": "Dev Sci",
+      "year": 2020,
+      "citations": "N/A",
+      "summary": "Dev Sci. 2020 Nov;23(6):e12964. doi: 10.1111/desc.12964. Epub 2020 Mar 31."
+    },
+    {
+      "id": 7,
+      "title": "Longitudinal relationships between visuospatial working memory, verbal counting and number line knowledge in preschoolers",
+      "journal": "Psychol Res",
+      "year": 2025,
+      "citations": "N/A",
+      "summary": "Psychol Res. 2025 Jun 4;89(3):108. doi: 10.1007/s00426-025-02142-z."
+    },
+    {
+      "id": 8,
+      "title": "The impact of math anxiety and self-efficacy in middle school STEM choices: A 3-year longitudinal study",
+      "journal": "Br J Educ Psychol",
+      "year": 2024,
+      "citations": "N/A",
+      "summary": "Br J Educ Psychol. 2024 Dec;94(4):1091-1108. doi: 10.1111/bjep.12707. Epub 2024 Jul 8."
+    }
+  ]
+}
