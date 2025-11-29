@@ -51,6 +51,7 @@ export const useProfileStore = defineStore('profile', () => {
   // Compute topicDistribution from selectedInterests
   const topicDistribution = computed(() => {
     const selected = interestsStore.selectedInterests
+    if (selected === null) return [];
     if (selected.length === 0) {
       // Return empty array or default values if no interests selected
       return []

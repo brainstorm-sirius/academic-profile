@@ -12,7 +12,6 @@ const { fetchRecommendations } = collaborationStore
 
 const count = ref('10')
 
-
 const countOptions = ['5', '10', '15', '20', '25', '30', '100']
 
 const handleRecommend = () => {

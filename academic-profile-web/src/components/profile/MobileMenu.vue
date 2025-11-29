@@ -11,6 +11,7 @@ const isMenuOpen = ref(false)
 
 const navItems = [
   { label: 'Dashboard', path: '/profile' },
+  { label: 'Search authors', path: '/authors-search' },
   { label: 'Collaboration', path: '/collaboration' },
   { label: 'Edit interests', path: '/edit-interests' },
   { label: 'Knowledge Graph', path: '/knowledge-graph' }

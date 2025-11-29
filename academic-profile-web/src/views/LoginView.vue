@@ -67,7 +67,7 @@ const handleSubmit = async () => {
   result = await response.json()
   
   // Обновляем данные пользователя
-  interestsStore.selectedInterests = result.interests_list.split(',')
+  interestsStore.selectedInterests = result.interests_list ? result.interests_list.split(',') : []
   profileStore.scientist.id = result.id
   profileStore.scientist.name = result.first_name + ' ' + result.last_name
   profileStore.scientist.username = result.login
