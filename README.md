@@ -24,7 +24,7 @@
 2. **Убедитесь, что CSV файлы находятся в директории backend**:
    - `backend_academic/authors_expanded_with_ids.csv`
    - `backend_academic/authors_scientific_interests.csv`
-
+https://drive.google.com/drive/folders/1weqZpz9Y24aHnonFIKbn8IJvipeWZN5q?usp=share_link - скачать их можно здесь
 3. **Запустите проект через Docker Compose**:
    ```bash
    docker-compose up --build
